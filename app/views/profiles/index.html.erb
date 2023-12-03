@@ -1,0 +1,20 @@
+<div>
+  <div class="d-flex">
+    <div>
+      <h4><%= @user.nickname %> (<%= @user.first_name %>&nbsp;<%= @user.last_name %>)</h4>
+      <h5>Handynummer: <%= @user.phone_number %></h5>
+      <h5>Geburtstag: <%= @user.birthday.strftime('%d.%m.%Y') %></h5>
+      <h5>Arbeitsbereich: <%= @user.user_type.capitalize %></h5>
+    </div>
+    <div>
+      <% if @user.avatar.present? %>
+        <%= cl_image_tag @user.avatar.key, style: "width:100%; height:320px;" %>
+      <% end %>
+    </div>
+  </div>
+  <br>
+  <br>
+  <% if @user == current_user %>
+    <%= link_to "Profil bearbeiten", edit_user_path(@user.id) %>
+  <% end %>
+</div>
