@@ -1,0 +1,12 @@
+<div class="container monthly_calendar" style="max-width:100%">
+  <%= month_calendar(events: @events) do |date, events| %>
+    <%= date.day %>
+
+    <% events.each do |e| %>
+      <div>
+        <button class="btn-calendar" data-event-id="<%= e.id %>" data-event-url="<%= event_details_path(e) %>" data-action="click->calendar-show#showCard"
+        data-calendar-show-target="button"><i class="fa-solid fa-futbol"></i></button>
+      </div>
+    <% end %>
+  <% end %>
+</div>

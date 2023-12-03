@@ -1,0 +1,9 @@
+<div>
+  <%= simple_form_for [@developer] do |f| %>
+    <%= f.label "Titel" %>
+    <%= f.input :title, label: false %>
+    <%= f.label "Beschreibung" %>
+    <%= f.input :content, label: false %>
+    <%= f.submit "Vorschlag einreichen" %>
+  <% end %>
+</div>

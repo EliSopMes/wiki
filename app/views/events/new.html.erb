@@ -1,0 +1,80 @@
+<div>
+  <h2>neue Veranstaltung</h2>
+  <div style="margin-top:20px;">
+    <%= simple_form_for [@event] do |f| %>
+      <%= f.label "Titel" %>
+      <%= f.input :title, label: false %>
+      <%= f.label "Start" %>
+      <%= f.input :start_time, minute_step: 15,
+                                  as: :datetime,
+                                  autofocus: true,
+                                  label: false,
+                                  html5: true, class:"form-control form-control-lg" %>
+      <%= f.label "Ende" %>
+      <%= f.input :end_time, minute_step: 15,
+                                  as: :datetime,
+                                  autofocus: true,
+                                  label: false,
+                                  html5: true, class:"form-control form-control-lg" %>
+      <%= f.label "Art von Event" %>
+      <%= f.input :event_type, label: false %>
+      <%= f.label "Booker" %>
+      <%= f.input :booker, collection: @bookers, label: false%>
+      <%= f.label "TDL" %>
+      <%= f.input :tdl, collection: @adls, label: false %>
+      <%= f.label "ADL" %>
+      <%= f.input :adl, collection: @adls, label: "ADL" %>
+      <%= f.label "Anzahl Gäste" %>
+      <%= f.input :pre_number_of_guests, label: false %>
+      <%= f.label "Veranstalter" %>
+      <%= f.input :organizer, label: false %>
+      <%= f.label "Abrechnungsstatus" %>
+      <%= f.input :invoice_status, label: false %>
+      <%= f.label "Ablauf" %>
+      <%= f.input :schedule, label: false %>
+      <%= f.label "Lieferungen" %>
+      <%= f.input :deliveries, label: false %>
+      <%= f.label "Abholungen" %>
+      <%= f.input :pick_ups, label: false %>
+      <%= f.label "Get in" %>
+      <%= f.input :get_in, label: false %>
+      <%= f.label "Get in Details" %>
+      <%= f.input :get_in_info, label: false %>
+      <%= f.label "Set up" %>
+      <%= f.input :set_up_info, label: false %>
+      <%= f.label "Kamin" %>
+      <%= f.input :fire_place, label: false %>
+      <%= f.label "Selbstzahler" %>
+      <%= f.input :self_payment, label: false %>
+      <%= f.label "Gastro Details" %>
+      <%= f.input :gastro_info, label: false %>
+      <%= f.label "Catering" %>
+      <%= f.input :catering, label: false %>
+      <%= f.label "Catering Details" %>
+      <%= f.input :catering_info, label: false %>
+      <%= f.label "Personal" %>
+      <%= f.input :staff_info, label: false %>
+      <%= f.label "Security" %>
+      <%= f.input :set_up_info, label: false %>
+      <%= f.label "Brandwache" %>
+      <%= f.input :fire_watch, label: false %>
+      <%= f.label "Garderobe" %>
+      <%= f.input :cloakroom, label: false %>
+      <%= f.label "Garderobe Details" %>
+      <%= f.input :cloakroom_info, label: false %>
+      <%= f.label "Sonstiges" %>
+      <%= f.input :other_info, label: false %>
+      <%= f.label "Technische Details" %>
+      <%= f.input :technical_info, label: false %>
+      <%= f.label "Post Veranstaltung Details" %>
+      <%= f.input :post_event_info, label: false %>
+      <%= f.label "Abendkasse" %>
+      <%= f.input :box_office_info, label: false %>
+      <%= f.label "Kaputt" %>
+      <%= f.input :broken_info, label: false %>
+      <%= f.label "Externes Personal Details" %>
+      <%= f.input :external_staff_hours, label: false %>
+      <%= f.submit "Veranstaltung erstellen" %>
+    <% end %>
+  </div>
+</div>

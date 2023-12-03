@@ -1,0 +1,32 @@
+.header-container {
+  height: 100px;
+  width: 100vw;
+  background-color: white;
+}
+
+.red-header-bar-low {
+  background-color: #DC0C15;
+  height: 27px;
+  width: 100vw;
+  margin-top: 2.2px;
+}
+
+.red-header-bar-high {
+  background-color: #DC0C15;
+  height: 2px;
+  width: 100vw;
+  margin-top: 10px;
+}
+
+.header-links {
+  margin-left:500px;
+  margin-top: 11px;
+  width: 47vw;
+}
+
+.header-links a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: larger;
+  color: #DC0C15;
+}
